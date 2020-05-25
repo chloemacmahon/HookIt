@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HookIt", "HookIt\HookIt.csproj", "{F12D4BB8-45F1-4389-84F6-DA9749631925}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F12D4BB8-45F1-4389-84F6-DA9749631925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12D4BB8-45F1-4389-84F6-DA9749631925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12D4BB8-45F1-4389-84F6-DA9749631925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12D4BB8-45F1-4389-84F6-DA9749631925}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73C02B72-8AC8-4A36-962B-071799AD5AD0}
+	EndGlobalSection
+EndGlobal
