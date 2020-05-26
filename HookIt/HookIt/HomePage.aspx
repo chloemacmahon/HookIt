@@ -50,6 +50,9 @@
         function yarn() {
             document.getElementById('<%= Button2.ClientID %>').click();
         }
+        function home() {
+            document.getElementById('<%= Button4.ClientID %>').click();
+        }
         
     </script>
 
@@ -65,12 +68,14 @@
                 </p>
             </div>
             <table style="width:100%;">
+                <asp:Button ID="Button4" runat="server" Text="Button" style="display:none" OnClick="resetHomePage"/>
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">
-                        <asp:Button class="btnHooks" ID="btnHooks" runat="server" Height="153px" Text="Hooks" Width="245px" BackColor="White" OnClick="btnHooks_Click" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:hooks()"/>
+                        <asp:Button class="btnAccessories" ID="btnAccessories" runat="server" Height="153px" Text="Accessories" Width="245px" BackColor="White" OnClick="btnHooks_Click" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:hooks()" OnMouseOut="javascript:home()"/>
                 <strong class="newStyle4">
                         <asp:Button ID="Button1" runat="server" style="display:none" Text="Button" OnClick="btnHooks_MouseHover" />
+                        
                         </strong>
                     </td>
                     <td>&nbsp;</td>
@@ -78,7 +83,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">
-                        <asp:Button ID="btnYarn" runat="server" Height="153px" Text="Yarn" Width="245px" OnClick="btnYarn_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:yarn()"/>
+                        <asp:Button ID="btnYarn" runat="server" Height="153px" Text="Yarn" Width="245px" OnClick="btnYarn_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:yarn()" OnMouseOut="javascript:home()"/>
                         <asp:Button ID="Button2" runat="server" Text="Button" style="display:none" OnClick="btnYarn_MouseHover"/>
                     </td>
                     <td>&nbsp;</td>
@@ -86,7 +91,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">
-                        <asp:Button ID="btnPatterns" runat="server" Height="153px" Text="Pattern" Width="245px" OnClick="btnPatterns_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:patt()"/>
+                        <asp:Button ID="btnPatterns" runat="server" Height="153px" Text="Pattern" Width="245px" OnClick="btnPatterns_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:patt()" OnMouseOut="javascript:home()"/>
                         <asp:Button ID="Button3" runat="server" Text="Button" style="display:none" OnClick="btnPattern_MouseHover"/>
                     </td>
                     <td>&nbsp;</td>

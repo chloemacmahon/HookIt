@@ -10,16 +10,7 @@
 namespace HookIt {
     
     
-    public partial class HomePage {
-        
-        /// <summary>
-        /// homebody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl homebody;
+    public partial class Hooks {
         
         /// <summary>
         /// form1 control.
@@ -31,66 +22,66 @@ namespace HookIt {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Button4 control.
+        /// ibtnAluminium control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnAluminium;
         
         /// <summary>
-        /// btnAccessories control.
+        /// ibtnTunisian control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccessories;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnTunisian;
         
         /// <summary>
-        /// Button1 control.
+        /// ibtnergonomic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnergonomic;
         
         /// <summary>
-        /// btnYarn control.
+        /// ibtnknook control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnYarn;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnknook;
         
         /// <summary>
-        /// Button2 control.
+        /// ibtnbamboo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnbamboo;
         
         /// <summary>
-        /// btnPatterns control.
+        /// ibtnplastic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPatterns;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnplastic;
         
         /// <summary>
-        /// Button3 control.
+        /// btnHomepage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button btnHomepage;
     }
 }
