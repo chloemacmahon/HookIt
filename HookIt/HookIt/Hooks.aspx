@@ -70,7 +70,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:ImageButton ID="ibtnAluminium" runat="server" Height="221px" ImageUrl="~/Images/crochethooks.jpg" Width="301px" OnMouseOver="javascript:show('Aluminium')" OnMouseOut="javascript:hide('Aluminium')"/>
+                        <asp:ImageButton ID="ibtnAluminium" runat="server" Height="221px" ImageUrl="~/Images/crochethooks.jpg" Width="301px" OnMouseOver="javascript:show('Aluminium')" OnMouseOut="javascript:hide('Aluminium')" OnClick="ibtnAluminium_Click"/>
                     </td>
                     <td class="auto-style2">
                         <asp:ImageButton ID="ibtnTunisian" runat="server" Height="223px" ImageUrl="~/Images/tunisian.jpg" Width="361px" OnMouseOver="javascript:show('Tunisian')" OnMouseOut="javascript:hide('Tunisian')"/>

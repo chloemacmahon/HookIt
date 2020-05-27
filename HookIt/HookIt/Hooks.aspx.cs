@@ -18,5 +18,9 @@ namespace HookIt
         {
             Server.Transfer("HomePage.aspx"); //Navigates to homepage
         }
+
+        protected void ibtnAluminium_Click(object sender, ImageClickEventArgs e)
+        {
+        }
     }
 }
