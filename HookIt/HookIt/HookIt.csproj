@@ -67,27 +67,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\crochethooks.jpg" />
-    <Content Include="App_Data\dolls.jpg" />
-    <Content Include="App_Data\duck.jpg" />
-    <Content Include="App_Data\floral.jpg" />
-    <Content Include="App_Data\hook1.jpg" />
-    <Content Include="App_Data\hook2.jpg" />
-    <Content Include="App_Data\hooks1.jpg" />
+    <Content Include="Hooks.aspx" />
+    <Content Include="Images\bamboo1.jpg" />
+    <Content Include="Images\bamboohook.jpg" />
     <Content Include="Images\crochethooks.jpg" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\dolls.jpg" />
     <Content Include="Images\duck.jpg" />
+    <Content Include="Images\ergonomic.jpg" />
     <Content Include="Images\floral.jpg" />
     <Content Include="Images\floral1.jpg" />
     <Content Include="Images\hook1.jpg" />
     <Content Include="Images\hook2.jpg" />
     <Content Include="Images\hooks1.jpg" />
+    <Content Include="Images\knook.jpg" />
     <Content Include="Images\pattern1.jpg" />
     <Content Include="Images\pattern2.jpg" />
+    <Content Include="Images\plastic.jpg" />
+    <Content Include="Images\tunisian.jpg" />
     <Content Include="Images\yarn.jpg" />
+    <Content Include="Images\yarn2.png" />
+    <Content Include="Images\yarn3.jpg" />
+    <Content Include="Images\yarn3.png" />
     <Content Include="Web.config" />
+    <Content Include="Yarn.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -100,10 +104,26 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Hooks.aspx.cs">
+      <DependentUpon>Hooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hooks.aspx.designer.cs">
+      <DependentUpon>Hooks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yarn.aspx.cs">
+      <DependentUpon>Yarn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yarn.aspx.designer.cs">
+      <DependentUpon>Yarn.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,6 +132,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
