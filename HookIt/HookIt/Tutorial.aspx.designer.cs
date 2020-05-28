@@ -10,16 +10,7 @@
 namespace HookIt {
     
     
-    public partial class HomePage {
-        
-        /// <summary>
-        /// homebody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl homebody;
+    public partial class Tutorial {
         
         /// <summary>
         /// form1 control.
@@ -31,22 +22,13 @@ namespace HookIt {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Button4 control.
+        /// DropDownListTutotial control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
-        
-        /// <summary>
-        /// btnAccessories control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAccessories;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListTutotial;
         
         /// <summary>
         /// Button1 control.
@@ -58,13 +40,13 @@ namespace HookIt {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// btnYarn control.
+        /// txtYoutube control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnYarn;
+        protected global::System.Web.UI.WebControls.TextBox txtYoutube;
         
         /// <summary>
         /// Button2 control.
@@ -76,39 +58,21 @@ namespace HookIt {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// btnPatterns control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPatterns;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Button3 control.
+        /// youtubevid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-        
-        /// <summary>
-        /// btnTutorials control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTutorials;
-        
-        /// <summary>
-        /// Button6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.HtmlControls.HtmlIframe youtubevid;
     }
 }
