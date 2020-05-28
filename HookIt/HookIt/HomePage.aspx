@@ -53,6 +53,9 @@
         function home() {
             document.getElementById('<%= Button4.ClientID %>').click();
         }
+        function tut() {
+            document.getElementById('<%= Button6.ClientID %>').click();
+        }
         
     </script>
 
@@ -93,6 +96,14 @@
                     <td class="auto-style1">
                         <asp:Button ID="btnPatterns" runat="server" Height="153px" Text="Pattern" Width="245px" OnClick="btnPatterns_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:patt()" OnMouseOut="javascript:home()"/>
                         <asp:Button ID="Button3" runat="server" Text="Button" style="display:none" OnClick="btnPattern_MouseHover"/>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="auto-style1">
+                        <asp:Button ID="btnTutorials" runat="server" Height="153px" Text="Tutorial" Width="245px"  BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:tut()" OnMouseOut="javascript:home()" OnClick="btnTutorials_Click"/>
+                        <asp:Button ID="Button6" runat="server" Text="Button" style="display:none" OnClick="btnTutorial_MouseHover"/>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

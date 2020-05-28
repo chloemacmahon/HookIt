@@ -31,6 +31,10 @@ namespace HookIt
         {
             homebody.Attributes.Add("style", "background:url(images/pattern1.jpg);background-repeat:no-repeat;color:#000000;"); //Changes background when user hovers over pattern button
         }
+        protected void btnTutorial_MouseHover(object sender, EventArgs e)
+        {
+            homebody.Attributes.Add("style", "background:url(images/yarn4.png);background-repeat:no-repeat;color:#FFFFFF;"); //Changes background when user hovers over pattern button
+        }
         protected void resetHomePage(object sender, EventArgs e)
         {
             homebody.Attributes.Add("style", "background:url(images/floral.jpg);background-repeat:no-repeat;color:#669999;"); //Changes background to normal homepage background
@@ -47,7 +51,12 @@ namespace HookIt
 
         protected void btnPatterns_Click(object sender, EventArgs e)
         {
+            Server.Transfer("PatternMain.aspx"); //Navigates to tutorial web page
+        }
 
+        protected void btnTutorials_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("Tutorial.aspx"); //Navigates to tutorial web page
         }
     }
 }
