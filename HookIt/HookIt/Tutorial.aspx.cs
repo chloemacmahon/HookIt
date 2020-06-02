@@ -38,6 +38,14 @@ namespace HookIt
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            conn = new SqlConnection(constr);
+            conn.Open(); //Opens connection 
+            adapt = new SqlDataAdapter();
+            string sql = @"INSERT INTO Requested(Searched) VALUES(@Searched)";
+            comm = new SqlCommand(sql, conn);
+            comm.Parameters.AddWithValue("@Searched", txtYoutube.Text); //Adds searched field to database
+            comm.ExecuteNonQuery();
+            conn.Close();
             Response.Redirect("https://www.youtube.com/results?search_query=" + txtYoutube.Text);//Navigates user to youtube
         }
 
@@ -63,6 +71,16 @@ namespace HookIt
             youtubevid.Attributes["src"] = sUrl; //Changes video in iframe to selected tutorial
             conn.Close();
 
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("PatternAdd.aspx");
+        }
+
+        protected void btnHome_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("HomePage.aspx");
         }
     }
 }

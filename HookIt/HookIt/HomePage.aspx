@@ -36,8 +36,9 @@
             font-family: "Freestyle Script";
             font-size: 121px;
         }
-        .auto-style2 {
-            font-size: large;
+        .auto-style3 {
+            width: 100%;
+            height: 487px;
         }
     </style>
     <script>
@@ -70,12 +71,12 @@
                     <strong >Your go to website for crocheting tips, patterns and best hooks and yarns to use </strong>
                 </p>
             </div>
-            <table style="width:100%;">
+            <table class="auto-style3">
                 <asp:Button ID="Button4" runat="server" Text="Button" style="display:none" OnClick="resetHomePage"/>
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">
-                        <asp:Button class="btnAccessories" ID="btnAccessories" runat="server" Height="153px" Text="Accessories" Width="245px" BackColor="White" OnClick="btnHooks_Click" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:hooks()" OnMouseOut="javascript:home()"/>
+                        <asp:Button class="btnAccessories" ID="btnAccessories" runat="server" Height="121px" Text="Accessories" Width="245px" BackColor="White" OnClick="btnHooks_Click" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:hooks()" OnMouseOut="javascript:home()"/>
                 <strong class="newStyle4">
                         <asp:Button ID="Button1" runat="server" style="display:none" Text="Button" OnClick="btnHooks_MouseHover" />
                         
@@ -86,7 +87,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">
-                        <asp:Button ID="btnYarn" runat="server" Height="153px" Text="Yarn" Width="245px" OnClick="btnYarn_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:yarn()" OnMouseOut="javascript:home()"/>
+                        <asp:Button ID="btnYarn" runat="server" Height="121px" Text="Yarn" Width="245px" OnClick="btnYarn_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:yarn()" OnMouseOut="javascript:home()"/>
                         <asp:Button ID="Button2" runat="server" Text="Button" style="display:none" OnClick="btnYarn_MouseHover"/>
                     </td>
                     <td>&nbsp;</td>
@@ -94,7 +95,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">
-                        <asp:Button ID="btnPatterns" runat="server" Height="153px" Text="Pattern" Width="245px" OnClick="btnPatterns_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:patt()" OnMouseOut="javascript:home()"/>
+                        <asp:Button ID="btnPatterns" runat="server" Height="121px" Text="Pattern" Width="245px" OnClick="btnPatterns_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:patt()" OnMouseOut="javascript:home()"/>
                         <asp:Button ID="Button3" runat="server" Text="Button" style="display:none" OnClick="btnPattern_MouseHover"/>
                     </td>
                     <td>&nbsp;</td>
@@ -102,7 +103,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td class="auto-style1">
-                        <asp:Button ID="btnTutorials" runat="server" Height="153px" Text="Tutorial" Width="245px"  BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:tut()" OnMouseOut="javascript:home()" OnClick="btnTutorials_Click"/>
+                        <asp:Button ID="btnTutorials" runat="server" Height="121px" Text="Tutorial" Width="245px"  BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:tut()" OnMouseOut="javascript:home()" OnClick="btnTutorials_Click"/>
                         <asp:Button ID="Button6" runat="server" Text="Button" style="display:none" OnClick="btnTutorial_MouseHover"/>
                     </td>
                     <td>&nbsp;</td>

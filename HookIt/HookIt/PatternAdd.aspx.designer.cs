@@ -10,7 +10,7 @@
 namespace HookIt {
     
     
-    public partial class Yarn {
+    public partial class PatternAdd {
         
         /// <summary>
         /// form1 control.
@@ -22,66 +22,93 @@ namespace HookIt {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ListBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.ListBox ListBox1;
         
         /// <summary>
-        /// txtSearch control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// DropDownListSearch control.
+        /// CheckBoxHasTut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListSearch;
+        protected global::System.Web.UI.WebControls.CheckBox CheckBoxHasTut;
         
         /// <summary>
-        /// chkAll control.
+        /// lblYoutube control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkAll;
+        protected global::System.Web.UI.WebControls.Label lblYoutube;
         
         /// <summary>
-        /// btnSearch control.
+        /// txtYoutubelink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.TextBox txtYoutubelink;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// lblDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Label lblDescription;
         
         /// <summary>
-        /// GridView1 control.
+        /// txtDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        
+        /// <summary>
+        /// DropDownListCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCategory;
+        
+        /// <summary>
+        /// FileUploadFile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadFile;
+        
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
     }
 }
