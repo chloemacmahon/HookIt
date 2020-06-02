@@ -20,7 +20,7 @@
             font-family: "Freestyle Script";
             color: #FFFFFF;
             font-size: medium;
-            background-image: url('Images/background1.jpg');
+            background-image: url('Images/yarn5.jpg');
             background-repeat: repeat;
         }
         .auto-style3 {
@@ -59,10 +59,18 @@
         .auto-style14 {
             width: 12px;
         }
+        .newStyle3 {
+            font-family: "Freestyle Script";
+            color: #990000;
+            background-image: url('Images/yarn5.png');
+        }
+        .newStyle4 {
+            font-family: "freestyle Script";
+        }
     </style>
 </head>
 <body class="newStyle2">
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="newStyle3">
         <div class="auto-style1">
             <br />
             <h1 class="auto-style3">Tutorials</h1>
@@ -89,8 +97,8 @@
                     <td class="auto-style11">
                         <asp:TextBox ID="txtYoutube" runat="server" Font-Names="Century" Font-Size="14pt"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button2" runat="server" BackColor="White" BorderColor="White" Font-Names="Century" Font-Size="14pt" OnClick="Button2_Click" OnClientClick="return false" Text="Button" />
-                    </td>
+                        <asp:Button ID="Button2" runat="server" BackColor="White" BorderColor="White" Font-Names="Century" Font-Size="14pt" OnClick="Button2_Click" Text="Search" />
+                    &nbsp;</td>
                     <td class="auto-style11"></td>
                 </tr>
             </table>
@@ -107,7 +115,8 @@
                 </tr>
             </table>
             <br />
-            <br />
+            <asp:Button ID="btnHome" runat="server" Font-Names="Freestyle Script" Font-Size="18pt" OnClick="btnHome_Click" Text="Home, James" />
+            <span class="newStyle4">&nbsp;</span><br />
             <br />
         </div>
     </form>

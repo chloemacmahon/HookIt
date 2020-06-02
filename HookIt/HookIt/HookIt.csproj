@@ -67,9 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Pattern.mdf" />
-    <Content Include="App_Data\Pattern_log.ldf">
-      <DependentUpon>Pattern.mdf</DependentUpon>
+    <Content Include="App_Data\Product.mdf" />
+    <Content Include="App_Data\Product_log.ldf">
+      <DependentUpon>Product.mdf</DependentUpon>
     </Content>
     <Content Include="App_Data\Tutorial.mdf" />
     <Content Include="App_Data\Tutorial_log.ldf">
@@ -94,17 +94,28 @@
     <Content Include="Images\knook.jpg" />
     <Content Include="Images\pattern1.jpg" />
     <Content Include="Images\pattern2.jpg" />
+    <Content Include="Images\Pattern3.jpg" />
+    <Content Include="Images\Pattern4.jpg" />
+    <Content Include="Images\Pattern5.jpg" />
+    <Content Include="Images\Pattern6.jpg" />
+    <Content Include="Images\Pattern7.jpg" />
     <Content Include="Images\plastic.jpg" />
     <Content Include="Images\tunisian.jpg" />
+    <Content Include="Images\Wool.jpg" />
     <Content Include="Images\yarn.jpg" />
     <Content Include="Images\yarn2.png" />
     <Content Include="Images\yarn3.jpg" />
     <Content Include="Images\yarn3.png" />
     <Content Include="Images\yarn4.png" />
+    <Content Include="Images\yarn5.png" />
+    <Content Include="Images\yarn6.jpg" />
+    <Content Include="PatternAdd.aspx" />
     <Content Include="PatternMain.aspx" />
+    <Content Include="PatternView.aspx" />
     <Content Include="Tutorial.aspx" />
     <Content Include="Web.config" />
     <Content Include="Yarn.aspx" />
+    <Content Include="Yarn.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -124,12 +135,26 @@
     <Compile Include="Hooks.aspx.designer.cs">
       <DependentUpon>Hooks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PatternAdd.aspx.cs">
+      <DependentUpon>PatternAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatternAdd.aspx.designer.cs">
+      <DependentUpon>PatternAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PatternMain.aspx.cs">
       <DependentUpon>PatternMain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PatternMain.aspx.designer.cs">
       <DependentUpon>PatternMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatternView.aspx.cs">
+      <DependentUpon>PatternView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatternView.aspx.designer.cs">
+      <DependentUpon>PatternView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tutorial.aspx.cs">
