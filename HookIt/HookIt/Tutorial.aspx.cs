@@ -14,7 +14,7 @@ namespace HookIt
         
         private SqlCommand comm;
         private SqlConnection conn;
-        private String constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\chloe\Documents\University\CMPG 212\Projects\HookIt\HookIt\HookIt\App_Data\Tutorial.mdf;Integrated Security=True";
+        private String constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Tutorial.mdf;Integrated Security=True";
         private SqlDataAdapter adapt;
         private DataSet ds;
         protected void Page_Load(object sender, EventArgs e)
@@ -80,6 +80,7 @@ namespace HookIt
 
         protected void btnHome_Click(object sender, EventArgs e)
         {
+
             Server.Transfer("HomePage.aspx");
         }
     }

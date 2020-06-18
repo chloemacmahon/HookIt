@@ -1,0 +1,37 @@
+﻿body {
+    font-family: 'Freestyle Script';
+    margin: 2%;
+    padding: 0;
+}
+h1 {
+    font-size: 100px;
+}
+h2 {
+    font-size: 28px;
+}
+table {
+    width: 100%;
+}
+.center {
+    text-align:center;
+}
+.right {
+    text-align:right;
+}
+.largebutton {
+    font-family: Century;
+    font-size: 50px;
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    border-width: 1px;
+    border-color: white;
+}
+.smallbutton {
+    font-family: Century ;
+    background-color: white;
+    font-size: 22px;
+    border-width: 1px;
+    border-color: white;
+}
+

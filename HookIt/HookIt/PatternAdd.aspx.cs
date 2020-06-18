@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.IO;
+using System.Configuration;
 
 namespace HookIt
 {
@@ -14,7 +15,7 @@ namespace HookIt
     {
         private SqlCommand comm;
         private SqlConnection conn;
-        private String constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\chloe\Documents\University\CMPG 212\Projects\HookIt\HookIt\HookIt\App_Data\Tutorial.mdf;Integrated Security=True";
+        private String constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Tutorial.mdf;Integrated Security=True";
         private SqlDataAdapter adapt;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -22,6 +23,7 @@ namespace HookIt
             
             if (Page.IsPostBack != true)
             {
+                body.Attributes.Add("style", "background:url(images/Pattern6.jpg);background-repeat:no-repeat;"); //Changes background to normal homepage background
                 conn = new SqlConnection(constr);
                 conn.Open(); //Opens database
 
@@ -39,8 +41,6 @@ namespace HookIt
 
                  txtYoutubelink.Visible = false; //Hides youtube label and textbox
                  lblYoutube.Visible = false;
-                 lblDescription.Visible = false;
-                 txtDescription.Visible = false;
             }
             if (String.Compare(ListBox1.Items[0].ToString(),"") != 0)
             {
@@ -60,70 +60,87 @@ namespace HookIt
             int iequal = 0;
             if (CheckBoxHasTut.Checked)
             {
-                for (int i = 0; i < txtYoutubelink.Text.Length ; i++)
+                try
                 {
-                    if ((txtYoutubelink.Text[i] != '/') && (ihash <= 2))
+                    for (int i = 0; i < txtYoutubelink.Text.Length; i++)
                     {
-                        sYoutubeurl = sYoutubeurl + txtYoutubelink.Text[i];
+                        if ((txtYoutubelink.Text[i] != '/') && (ihash <= 2))
+                        {
+                            sYoutubeurl = sYoutubeurl + txtYoutubelink.Text[i];
+                        }
+                        else if ((txtYoutubelink.Text[i] == '/') && (ihash < 2))
+                        {
+                            sYoutubeurl = sYoutubeurl + "/";
+                            ihash++;
+                        }
+                        else if ((txtYoutubelink.Text[i] == '/') && (ihash == 2))
+                        {
+                            sYoutubeurl = sYoutubeurl + "/" + "embed";
+                            ihash++;
+                        }
+                        else if ((txtYoutubelink.Text[i] != '=') && (iequal == 1))
+                        {
+                            sYoutubeurl = sYoutubeurl + txtYoutubelink.Text[i];
+                        }
+                        else if (txtYoutubelink.Text[i] == '=')
+                        {
+                            iequal++;
+                            sYoutubeurl = sYoutubeurl + "/";
+                        }
                     }
-                    else if ((txtYoutubelink.Text[i] == '/') && (ihash < 2))
-                    {
-                        sYoutubeurl = sYoutubeurl + "/" ;
-                        ihash++;
-                    }
-                    else if ((txtYoutubelink.Text[i] == '/') && (ihash == 2))
-                    {
-                        sYoutubeurl = sYoutubeurl + "/" + "embed";
-                        ihash++;
-                    }
-                    else if ((txtYoutubelink.Text[i] != '=') && (iequal == 1))
-                    {
-                        sYoutubeurl = sYoutubeurl + txtYoutubelink.Text[i];
-                    }
-                    else if (txtYoutubelink.Text[i] == '=')
-                    {
-                        iequal++;
-                        sYoutubeurl = sYoutubeurl + "/";
-                    }
+                    conn = new SqlConnection(constr);
+                    conn.Open(); //Opens connection
+                    string sql = @"INSERT INTO List(Name, Link) VALUES(@Name, @Link)";
+                    comm = new SqlCommand(sql, conn);
+                    comm.Parameters.AddWithValue("@Name", txtName.Text); //Add name field to database
+                    comm.Parameters.AddWithValue("@Link", sYoutubeurl); //Add name field to database
+                    comm.ExecuteNonQuery();
+                    conn.Close();
+                    string alert = "alert(\"Thank you for including a tutorial link\");"; //Displays error alert 
+                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", alert, true);
                 }
-                conn = new SqlConnection(constr);
-                conn.Open(); //Opens connection
-                string sql = @"INSERT INTO List(Name, Link, Description) VALUES(@Name, @Link, @Description)";
-                comm = new SqlCommand(sql, conn);
-                comm.Parameters.AddWithValue("@Name", txtName.Text); //Add name field to database
-                comm.Parameters.AddWithValue("@Link", sYoutubeurl); //Add name field to database
-                comm.Parameters.AddWithValue("@Description", txtDescription.Text);
-                comm.ExecuteNonQuery();
-                conn.Close();
+                catch(Exception )
+                {
+                    string alert = "alert(\"Please enter a valid link\");"; //Displays error alert 
+                    ScriptManager.RegisterStartupScript(this, GetType(),"ServerControlScript", alert, true);
+                }
+
+                
 
             }
 
-            //File Upload 
-            string filePath = FileUploadFile.PostedFile.FileName;
-            string fileName = Path.GetFileName(filePath);
-            string extention = Path.GetExtension(filePath);
+            
 
             conn = new SqlConnection(constr);
             conn.Open(); //Opens connection
             if (FileUploadFile.HasFile)
             {
-                if (extention == ".pdf")
+                //File Upload 
+                string filePath = FileUploadFile.PostedFile.FileName;
+                string fileName = Path.GetFileName(filePath);
+                string extention = Path.GetExtension(filePath);
+                if (extention == ".txt")
                 {
-                    filePath = "pdf";
+                    //Open and reads file
+                    StreamReader inputfile = new StreamReader(FileUploadFile.FileContent);
+                    string text = inputfile.ReadToEnd();
+                    
+                    string sql = @"INSERT INTO Pattern(Name, Category, Text) VALUES(@Name, @Category, @Text)";
+                    comm = new SqlCommand(sql, conn);
+                    comm.Parameters.AddWithValue("@Name", txtName.Text); //Add name field to database
+                    comm.Parameters.AddWithValue("@Category", DropDownListCategory.SelectedItem.ToString()); //Add name field to database
+                    comm.Parameters.AddWithValue("@Text", text); //Add name field to database
+                    comm.ExecuteNonQuery();
+                    conn.Close();
+                    inputfile.Close();
                 }
-                else if (extention == ".txt")
+                else
                 {
-                    filePath = "txt";
+                    string alert = "alert(\"Please enter a valid link\");"; //Displays error alert 
+                    ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", alert, true);
                 }
-                Stream fs = FileUploadFile.PostedFile.InputStream;
-                BinaryReader br = new BinaryReader(fs);
-                Byte[] bytes = br.ReadBytes((Int32)fs.Length);
-                string sql = @"INSERT INTO Pattern(Name, Category, File, FileType) VALUES(@Name, @Category,@File, @FileType)";
-                comm = new SqlCommand(sql, conn);
-                comm.Parameters.AddWithValue("@Name", txtName.Text); //Add name field to database
-                comm.Parameters.AddWithValue("@Category", DropDownListCategory.SelectedItem.ToString()); //Add name field to database
-                comm.Parameters.AddWithValue("@File", bytes);
-                comm.Parameters.AddWithValue("@FileType", extention);
+                
+                
             }
             else
             {
@@ -131,12 +148,20 @@ namespace HookIt
                 comm = new SqlCommand(sql, conn);
                 comm.Parameters.AddWithValue("@Name", txtName.Text); //Add name field to database
                 comm.Parameters.AddWithValue("@Category", DropDownListCategory.SelectedItem.ToString()); //Add name field to database
+                comm.ExecuteNonQuery();
+                conn.Close();
             }
-
-             
-            
-            comm.ExecuteNonQuery();
-            conn.Close();
+            if (ListBox1.SelectedIndex >= 0)
+            {
+                if (ListBox1.Items[ListBox1.SelectedIndex].ToString() == txtName.Text)
+                {
+                    conn.Open(); //Opens connection
+                    string sql = @"DELETE FROM Requested WHERE searched = '" + ListBox1.Items[ListBox1.SelectedIndex].ToString() + "'"; //Deletes item if a tutorial has been added
+                    comm = new SqlCommand(sql, conn);
+                    comm.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
         }
 
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -145,15 +170,11 @@ namespace HookIt
             {
                 txtYoutubelink.Visible = true; //Shows youtube label and textbox
                 lblYoutube.Visible = true;
-                lblDescription.Visible = true;
-                txtDescription.Visible = true;
             }
             else
             {
                 txtYoutubelink.Visible = false; //Hides youtube label and textbox
                 lblYoutube.Visible = false;
-                lblDescription.Visible = false;
-                txtDescription.Visible = false;
             }
         }
 

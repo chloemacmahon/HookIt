@@ -1,0 +1,17 @@
+﻿body {
+    background-color: #808000;
+    color: #FFFFCC;
+}
+
+p {
+    font-size: 34px;
+    text-align: center;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}

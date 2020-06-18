@@ -58,6 +58,15 @@ namespace HookIt {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
+        /// btnPatterns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPatterns;
+        
+        /// <summary>
         /// btnYarn control.
         /// </summary>
         /// <remarks>
@@ -76,15 +85,6 @@ namespace HookIt {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// btnPatterns control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPatterns;
-        
-        /// <summary>
         /// Button3 control.
         /// </summary>
         /// <remarks>
@@ -92,6 +92,15 @@ namespace HookIt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button3;
+        
+        /// <summary>
+        /// Button6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
         /// btnTutorials control.
@@ -103,12 +112,12 @@ namespace HookIt {
         protected global::System.Web.UI.WebControls.Button btnTutorials;
         
         /// <summary>
-        /// Button6 control.
+        /// ImageButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
     }
 }
