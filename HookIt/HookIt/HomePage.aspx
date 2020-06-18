@@ -4,43 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            text-align: center;
-        }
-        .imageback {
-            background-position: center center;
-            background-repeat: no-repeat;
-            margin: 0px 0px 0px 0px;
-            width: 1000px;
-            height: 1000px;
-            padding: 0px 0px 0px 0px;
-            text-align: center;
-            font-family: Bahnschrift;
-        }
-        .newStyle1 {
-            font-family: "Bahnschrift Light";
-        }
-        .newStyle2 {
-            font-family: "Bahnschrift Light";
-        }
-        .newStyle3 {
-            font-family: "Felix Titling";
-        }
-        .newStyle6 {
-            font-family: "Freestyle Script";
-            font-size: 79px;
-        }
-        .newStyle6 {
-            font-family: "Freestyle Script";
-            font-size: 121px;
-        }
-        .auto-style3 {
-            width: 100%;
-            height: 487px;
-        }
-    </style>
+    <title>Home</title>
+    <link rel="stylesheet" type ="text/css" href="Style/GeneralStyle.css" />
+    <link rel="stylesheet" type ="text/css" href="Style/HomePageStyle.css" />
     <script>
         function hooks() {
             document.getElementById('<%= Button1.ClientID %>').click();
@@ -61,57 +27,44 @@
     </script>
 
 </head>
-<body id="homebody" runat="server" >
+<body class="center" id="homebody" runat="server" >
     <form id="form1" runat="server" class="newStyle2">
-        <div class="auto-style1">
+        <div>
             <div>
-                <h1>
-                <strong class="newStyle6">Hook it!</strong></h1>
-                <p id="intro" >
-                    <strong >Your go to website for crocheting tips, patterns and best hooks and yarns to use </strong>
-                </p>
+                <h1>Hook it!</h1>
+                <h2 id="intro" >Your go to website for crocheting tips, patterns and best hooks and yarns to use</h2>
             </div>
-            <table class="auto-style3">
+            <table>
                 <asp:Button ID="Button4" runat="server" Text="Button" style="display:none" OnClick="resetHomePage"/>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td class="auto-style1">
-                        <asp:Button class="btnAccessories" ID="btnAccessories" runat="server" Height="121px" Text="Accessories" Width="245px" BackColor="White" OnClick="btnHooks_Click" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:hooks()" OnMouseOut="javascript:home()"/>
-                <strong class="newStyle4">
+                    <td class="largecells">
+                        <asp:Button CssClass="largebutton" class="btnAccessories" ID="btnAccessories" runat="server" Text="Accessories" OnClick="btnHooks_Click" OnMouseOver="javascript:hooks()" OnMouseOut="javascript:home()" />
+                <strong >
                         <asp:Button ID="Button1" runat="server" style="display:none" Text="Button" OnClick="btnHooks_MouseHover" />
                         
                         </strong>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="largecells">
+                        <asp:Button CssClass="largebutton" ID="btnPatterns" runat="server" Text="Pattern" OnClick="btnPatterns_Click" OnMouseOver="javascript:patt()" OnMouseOut="javascript:home()" />
+                        </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td class="auto-style1">
-                        <asp:Button ID="btnYarn" runat="server" Height="121px" Text="Yarn" Width="245px" OnClick="btnYarn_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large" OnMouseOver="javascript:yarn()" OnMouseOut="javascript:home()"/>
+                    <td class="largecells">
+                        <asp:Button CssClass="largebutton" ID="btnYarn" runat="server" Text="Yarn" OnClick="btnYarn_Click" OnMouseOver="javascript:yarn()" OnMouseOut="javascript:home()" />
                         <asp:Button ID="Button2" runat="server" Text="Button" style="display:none" OnClick="btnYarn_MouseHover"/>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td class="auto-style1">
-                        <asp:Button ID="btnPatterns" runat="server" Height="121px" Text="Pattern" Width="245px" OnClick="btnPatterns_Click" BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:patt()" OnMouseOut="javascript:home()"/>
                         <asp:Button ID="Button3" runat="server" Text="Button" style="display:none" OnClick="btnPattern_MouseHover"/>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td class="auto-style1">
-                        <asp:Button ID="btnTutorials" runat="server" Height="121px" Text="Tutorial" Width="245px"  BackColor="White" Font-Names="Century" Font-Size="XX-Large"  OnMouseOver="javascript:tut()" OnMouseOut="javascript:home()" OnClick="btnTutorials_Click"/>
                         <asp:Button ID="Button6" runat="server" Text="Button" style="display:none" OnClick="btnTutorial_MouseHover"/>
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="largecells">
+                        <asp:Button CssClass="largebutton" ID="btnTutorials" runat="server" Text="Tutorial" OnMouseOver="javascript:tut()" OnMouseOut="javascript:home()" OnClick="btnTutorials_Click" />
+                    </td>
                 </tr>
+                               
             </table>
         </div>
-    </form>
-    <p class="newStyle2">
+    <p>
+        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/colourwheel.gif" OnClick="ImageButton1_Click" style="text-align: right" Width="10%" />
     </p>
-</body>
+    </form>
+    </body>
 </html>

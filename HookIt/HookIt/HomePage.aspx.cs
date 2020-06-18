@@ -10,6 +10,7 @@ namespace HookIt
 {
     public partial class HomePage : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             homebody.Attributes.Add("style", "background:url(images/floral.jpg);background-repeat:no-repeat;color:#669999;"); //Changes background to normal homepage background
@@ -57,6 +58,11 @@ namespace HookIt
         protected void btnTutorials_Click(object sender, EventArgs e)
         {
             Server.Transfer("Tutorial.aspx"); //Navigates to tutorial web page
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("ColourWheel.aspx"); //Navigates to coour wheel 
         }
     }
 }

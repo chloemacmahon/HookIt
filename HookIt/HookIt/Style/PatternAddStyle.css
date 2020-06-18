@@ -1,0 +1,21 @@
+﻿body {
+    background-image: url('/Images/Pattern6.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+h1 {
+    font-size: 50px;
+    font-weight: normal;
+    background-color: #FFFFFF;
+}
+
+p {
+    font-size: 22pt;
+    text-align: left;
+}
+
+.buttonstyle {
+    font-family: Freestyle Script;
+    Font-Size: 20pt;
+    background-color: #FFFFFF;
+}

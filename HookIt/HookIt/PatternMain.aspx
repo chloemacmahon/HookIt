@@ -4,97 +4,54 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style2 {
-            height: 26px;
-        }
-        .newStyle1 {
-            font-family: "Freestyle Script";
-            font-size: 72px;
-        }
-        .auto-style3 {
-            font-size: 50px;
-            background-color: #FFFFFF;
-        }
-        .newStyle2 {
-            font-family: "Freestyle Script";
-            font-size: 75px;
-            background-image: url('Images/blanket.jpg');
-            background-repeat: no-repeat;
-        }
-        .auto-style4 {
-            color: #990000;
-            background-color: #FFFFFF;
-        }
-        .newStyle3 {
-            font-family: "Freestyle Script";
-            font-size: 75px;
-        }
-        .newStyle4 {
-            font-family: "freestyle Script";
-        }
-        .newStyle5 {
-            font-family: "freestyle Script";
-            font-size: 75px;
-            background-image: url('Images/blanket.jpg');
-            background-repeat: no-repeat;
-        }
-        .auto-style5 {
-            font-family: "Freestyle Script";
-            font-size: 75px;
-            text-align: center;
-        }
-        .auto-style6 {
-            text-align: center;
-        }
-        .auto-style7 {
-            height: 26px;
-            text-align: center;
-        }
-        .auto-style8 {
-            color: #990000;
-        }
-    </style>
+    <title>Patterns</title>
+    <link rel="stylesheet" type ="text/css" href="Style/PatternMainStyle.css" />
+    <link rel="stylesheet" type ="text/css" href="Style/GeneralStyle.css" />
+    
+    
 </head>
-<body>
-    <form id="form1" runat="server" class="newStyle5">
-        <div class="auto-style5">
-            <div class="auto-style6">
-                ...</div>
-            <table style="width:100%;">
+<body id="body" runat="server">
+    <form id="form1" runat="server">
+        <div>
+           <table>
                 <tr>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;&nbsp;<asp:Button ID="btnBlock" runat="server" BackColor="White" Font-Names="Century" Font-Size="40pt" ForeColor="#990000" Height="215px" OnClick="btnBlock_Click" Text="Blocks" Width="259px" />
+                    <td></td>
+                    <td class="columncentersize"><asp:Button CssClass="buttonstyle" ID="btnBlock" runat="server" Text="Blocks" OnClick="btnBlock_Click1"/>
                     </td>
-                    <td class="auto-style6">&nbsp;</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td class="auto-style6">&nbsp;&nbsp;<asp:Button ID="btnBlanket" runat="server" BackColor="White" Font-Names="Century" Font-Size="40pt" ForeColor="#990000" Height="229px" Text="Afghans" Width="258px" />
+                    <td><asp:Button CssClass="buttonstyle" ID="btnBlanket" runat="server" Text="Afghans" OnClick="btnBlanket_Click" />
                     </td>
-                    <td class="newStyle1"><span>
-                        <br />
-                        <span class="auto-style4">Patterns</span><span class="auto-style8"> </span></span>
-                        <br class="auto-style4" />
-                        <span class="auto-style3"><span class="auto-style8">&nbsp;Choose what type patterns you want to view</span><br />
-                        <br />
-                        </span></td>
-                    <td class="auto-style6">&nbsp;&nbsp;<asp:Button ID="btnClothes" runat="server" BackColor="White" Font-Names="Century" Font-Size="40pt" ForeColor="#990000" Height="224px" Text="Clothes" Width="246px" />
+                    <td class="columncentersize">
+                        <h3>
+                            <span >Patterns</span></h3>
+                        <h3>
+                            <span>Choose what type patterns you want to view</span> or if you want to add a pattern click the add a pattern button</h3>
+                    </td>
+                    <td><asp:Button CssClass="buttonstyle" ID="btnClothes"  runat="server" Text="Clothes" OnClick="btnClothes_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style7">&nbsp;</td>
-                    <td class="auto-style2">
-                        <asp:Button ID="btnOther" runat="server" BackColor="White" Font-Names="Century" Font-Size="40pt" ForeColor="#990000" Height="232px" Text="Other" Width="241px" />
+                    <td></td>
+                    <td class="columncentersize">
+                        <asp:Button CssClass="buttonstyle" ID="btnAll" runat="server" Text="Show all" OnClick="btnAll_Click"/>
+                        <br />
+                        </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="columncentersize">
+                        <asp:Button CssClass="buttonstyle" ID="btnAdd" runat="server" Text="Add Pattern" OnClick="btnAdd_Click" />
                     </td>
-                    <td class="auto-style7">&nbsp;</td>
+                    <td></td>
                 </tr>
             </table>
-            <div class="auto-style6">
-                <br />
-                <br />
-            </div>
         </div>
+        <p>
+            <asp:Button ID="btnHome" runat="server" CssClass="smallbutton" OnClick="btnHome_Click" Text="home" />
+        </p>
     </form>
 </body>
 </html>

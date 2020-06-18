@@ -75,11 +75,13 @@
     <Content Include="App_Data\Tutorial_log.ldf">
       <DependentUpon>Tutorial.mdf</DependentUpon>
     </Content>
+    <Content Include="ColourWheel.aspx" />
     <Content Include="Hooks.aspx" />
     <Content Include="Images\background1.jpg" />
     <Content Include="Images\bamboo1.jpg" />
     <Content Include="Images\bamboohook.jpg" />
     <Content Include="Images\blanket.jpg" />
+    <Content Include="Images\colourwheel.gif" />
     <Content Include="Images\crochethooks.jpg" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
@@ -112,12 +114,29 @@
     <Content Include="PatternAdd.aspx" />
     <Content Include="PatternMain.aspx" />
     <Content Include="PatternView.aspx" />
+    <Content Include="Style\ColorWheelStyle.css" />
+    <Content Include="Style\GeneralStyle.css" />
+    <Content Include="Style\HomePageStyle.css" />
+    <Content Include="Style\HookStyle.css" />
+    <Content Include="Style\PatternAddStyle.css" />
+    <Content Include="Style\PatternMainStyle.css" />
+    <Content Include="Style\PatternViewStyle.css" />
+    <Content Include="Style\TutorialStyle.css" />
     <Content Include="Tutorial.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Yarn.aspx" />
-    <Content Include="Yarn.css" />
+    <Content Include="Style\YarnStyle.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColourWheel.aspx.cs">
+      <DependentUpon>ColourWheel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ColourWheel.aspx.designer.cs">
+      <DependentUpon>ColourWheel.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
